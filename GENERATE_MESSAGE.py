@@ -1,0 +1,2 @@
+from INSTALL_GPG import *
+GET_DEPENDENCIES()

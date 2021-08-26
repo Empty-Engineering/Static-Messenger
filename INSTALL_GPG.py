@@ -1,13 +1,13 @@
 import os
 import platform
 import pkg_resources
-def getDependencies():
+def GET_DEPENDENCIES():
     required = {'requests'}
     installed = {pkg.key for pkg in pkg_resources.working_set}
     missing = required - installed
     if missing:
         os.system("python3 -m pip install "+str(required))
-def download_GPG():
+def DOWNLOAD_GPG():
     import requests
     if (platform.system().lower() == 'windows'):
         file_url = 'https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.1.tar.bz2'
@@ -19,7 +19,7 @@ def download_GPG():
         file_object = requests.get(file_url)
         with open('GPG_Suite-2021.1_105.dmg', 'wb') as local_file:
             local_file.write(file_object.content)
-def install_GPG():
+def INSTALL_GPG():
     osName = platform.system()
     if (osName.lower() == 'windows'):
         os.system('7z gnupg-2.3.1.tar.bz2')
