@@ -9,6 +9,5 @@ def main() -> int:
     GENERATE_PGP_TOKEN()
     fileName = input('Enter file name.\n')
     os.system('touch %s' % fileName)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
