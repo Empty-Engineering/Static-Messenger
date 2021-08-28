@@ -5,6 +5,7 @@ def EULA():
     return (userAgreement.lower() == 'yes' or userAgreement.lower() == 'y');
 def main():
     if EULA():
-        
+        #do something
+        return 0;
 if __name__ == '__main__':
     main();
